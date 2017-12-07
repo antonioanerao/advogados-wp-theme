@@ -1,43 +1,7 @@
 <?php get_header() ?>
     <!-- MAIN SLIDER -->
     <section class="main-slider" data-loop="true" data-autoplay="true" data-interval="7000">
-        <div class="inner">
-            <div class="slide" style="background-image: url(img/home/slider1.jpg);">
-                <div class="container text-center">
-                    <div class="slide-inner1">
-                        <span class="h3 from-bottom">A Complete Solution</span><br>
-                        <span class="h1 from-bottom">Lawyer Theme</span><br>
-                        <span class="h4 from-bottom">This is a Professional HTML Template for Attorney & Lawyer. Modern, function and easy to customize. Place your logo, change color and you are ready to go.</span><br>
-                        <a target="_blank" href="https://goo.gl/N8uaDM" class="btn btn-primary first-btn waves-effect waves-light scale-up">Buy Now</a>
-                        <a target="_blank" href="https://goo.gl/N8uaDM" class="btn btn-border waves-effect waves-light scale-up">View Details</a>
-                    </div>
-                </div>
-            </div><!-- .slide -->
-
-            <div class="slide" style="background-image: url(img/home/slider2.jpg);">
-                <div class="container">
-                    <div class="slide-inner2 common-inner">
-                        <span class="h3 from-left">Legal Solution</span><br>
-                        <span class="h2 from-right delay-1">Lawyer Theme</span><br>
-                        <span class="h4 from-bottom delay-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-               eiusmod tempor incididunt ut labore aliqua. veniam.</span><br>
-                        <a target="_blank" href="https://goo.gl/N8uaDM" class="btn btn-primary waves-effect waves-light scale-up delay-3">Buy Now</a>
-                    </div>
-                </div>
-            </div><!-- .slide -->
-
-            <div class="slide" style="background-image: url(img/home/slider3.jpg);">
-                <div class="container">
-                    <div class="common-inner slide-inner3">
-                        <span class="h3 scale-up">A Certified</span><br>
-                        <span class="h2 scale-up delay-1">Family Lawyer</span><br>
-                        <span class="h4 scale-up delay-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-               eiusmod tempor incididunt ut labore aliqua. veniam.</span><br>
-                        <a target="_blank" href="https://goo.gl/N8uaDM" class="btn btn-border waves-effect waves-light scale-up delay-3">Buy Now</a>
-                    </div>
-                </div>
-            </div><!-- .slide -->
-        </div><!-- .inner -->
+        <?php echo do_shortcode('[soliloquy id="420"]'); ?>
     </section><!-- .hero-slider -->
 
 
@@ -94,6 +58,11 @@
 <?php } ?>
 
 <?php
+    /* get index practice areas */
+    get_template_part('index', 'practice_area');
+?>
+
+<?php
     //****** get index countdown  ********
     get_template_part('index', 'count');
 ?>
@@ -139,7 +108,6 @@
 
             <?php endwhile; ?>
 
-
             <div class="col-sm-6 col-xs-12">
                 <?php
                     $args_skip_last_post = array(
@@ -177,91 +145,4 @@
     </div>
 </section>
 
-    <!-- COMMENT SECTION -->
-    <section class="clearfix commentSection paralax" style="background-image: url(img/paralax/paralax-img2.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="owl-carousel commentSlider">
-                        <div class="slide">
-                            <div class="commentContent text-center">
-                                <i class="icon-quote" aria-hidden="true"></i>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in</p>
-                                <h3>Santana White</h3>
-                                <h4>Sextual Offence</h4>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="commentContent text-center">
-                                <i class="icon-quote" aria-hidden="true"></i>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in</p>
-                                <h3>Santana White</h3>
-                                <h4>Sextual Offence</h4>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="commentContent text-center">
-                                <i class="icon-quote" aria-hidden="true"></i>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in</p>
-                                <h3>Santana White</h3>
-                                <h4>Sextual Offence</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BRAND SECTION -->
-    <section class="brandSection clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="owl-carousel partnersLogoSlider">
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-01.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-02.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-03.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-04.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-01.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-02.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-03.png" alt="partner-img">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="partnersLogo clearfix">
-                                <img src="img/home/partner-04.png" alt="partner-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

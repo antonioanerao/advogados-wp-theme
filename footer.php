@@ -1,5 +1,4 @@
 <footer>
-
     <div class="footerBottom clearfix">
         <div class="container">
             <div class="footerBottom-inner">
@@ -7,41 +6,19 @@
 
                     <div class="col-sm-6 col-xs-12">
                         <div class="media">
-                            <a class="media-left" href="#">
-                                <img src="img/footer-logo.png" alt="Image" class="img-responsive">
-                            </a>
                             <div class="media-body">
-                                <p>Nullam eget iaculis odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam at tortor congue, elementum libero a, tincidunt urna.</p>
-                                <p>Vivamus sodales sit amet nulla rhoncus pulvinar. Mauris faucibus justo tortor, cursus efficitur magna porta ac. Vivamus semper rutrum enim eget fringilla. </p>
+                                <?php dynamic_sidebar('rodape-widget-1'); ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-12">
-                        <div class="footerTitle">
-                            <h4>New York office</h4>
-                        </div>
                         <div class="footerInfo">
-                            <address>
-                                <p>23 East 2nd Street, 1st Floor,<br>
-                                    New York, NY</p>
-                                <span>154 564 2245</span>
-                                <span>256 3541</span>
-                                <a href="#">hello@example.com</a>
-                            </address>
+                            <?php dynamic_sidebar('rodape-widget-2'); ?>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-12">
-                        <div class="footerTitle">
-                            <h4>London office</h4>
-                        </div>
                         <div class="footerInfo">
-                            <address>
-                                <p>23 East 2nd Street, 1st Floor,<br>
-                                    New York, NY</p>
-                                <span>154 564 2245</span>
-                                <span>256 3541</span>
-                                <a href="#">hello@example.com</a>
-                            </address>
+                            <?php dynamic_sidebar('rodape-widget-3'); ?>
                         </div>
                     </div>
 
@@ -55,22 +32,34 @@
             <div class="row">
                 <div class="col-sm-7 col-xs-12">
                     <div class="copyRightText">
-                        <p>© 2016 Copyrighgt Trust Law Bootstrap Template by <a href="http://www.iamabdus.com/">Abdus</a>.</p>
+                        <p>Copyrighgt <a href="<?php echo get_option('home'); ?>/"><?php echo get_bloginfo('name'); ?></a> - Desenvolvido por <a href="https://www.cooprotec.com.br/" target="new">Cooprotec</a>.</p>
                     </div>
                 </div>
                 <div class="col-sm-5 col-xs-12">
+                    <?php
+                    $options = theme_setup_data();
+                    $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() ), $options );
+                    ?>
                     <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                        <?php if(!empty($header_contact_setting['header_contact_facebook'])) { ?>
+                            <li><a href="<?php echo $header_contact_setting['header_contact_facebook']; ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <?php } ?>
+
+                        <?php if(!empty($header_contact_setting['header_contact_twitter'])) { ?>
+                            <li><a href="<?php echo $header_contact_setting['header_contact_twitter']; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <?php } ?>
+
+                        <?php if(!empty($header_contact_setting['header_contact_linkedin'])) { ?>
+                            <li><a href="<?php echo $header_contact_setting['header_contact_linkedin']; ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+
 
 </div>
 

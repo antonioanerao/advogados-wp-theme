@@ -51,6 +51,35 @@
             'count_bloco04_title'=>__('4','appointment'),
             'count_bloco04_description' => 'Minicipios Atendidos',
 
+            //Practice Area
+            'practice_area_section_enabled' => '',
+            'practice_area_title' => __('Áreas de atuação','appointment'),
+            'practice_area_description' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'practice_area_bloco01_icon' => '',
+            'practice_area_bloco01_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco01_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco01_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img1.jpg',
+            'practice_area_bloco02_icon' => '',
+            'practice_area_bloco02_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco02_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco02_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img2.jpg',
+            'practice_area_bloco03_icon' => '',
+            'practice_area_bloco03_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco03_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco03_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img3.jpg',
+            'practice_area_bloco04_icon' => '',
+            'practice_area_bloco04_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco04_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco04_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img4.jpg',
+            'practice_area_bloco05_icon' => '',
+            'practice_area_bloco05_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco05_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco05_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img5.jpg',
+            'practice_area_bloco06_icon' => '',
+            'practice_area_bloco06_title'=>__('Easy to use','appointment'),
+            'practice_area_bloco06_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+            'practice_area_bloco06_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img6.jpg',
+
         );
   	}
 ?>

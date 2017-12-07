@@ -8,7 +8,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trust Law</title>
 
     <!-- PLUGINS CSS STYLE -->
     <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
@@ -23,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/isotope/isotope.css">
     <link rel="stylesheet" type="text/css" href="plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="plugins/wave/waves.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css?v1.0.7">
+    <link rel="stylesheet" type="text/css" href="style.css?v1.0.20">
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -63,7 +62,6 @@
 
     <?php wp_head(); ?>
 </head>
-<?php bloginfo("plugin_directory"); ?>
 <?php
 $options = theme_setup_data();
 $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() ), $options );
@@ -125,18 +123,17 @@ $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() )
                         </button>
 
                         <?php
-                        if ( function_exists( 'the_custom_logo' ) )
-                        {
-                            if(!empty(the_custom_logo()))
+                            $custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                            if ( has_custom_logo())
                             {
-                                the_custom_logo();
+                                echo '<a href="'.get_option('home').'"><img class="navbar-brand" src="'. esc_url( $logo[0] ) .'"></a>';
                             }
 
                             else
                             {
-                                echo '<a class="navbar-brand" href="'.get_option('home').'"><img src="img/logo.png" alt="Coloque sua logo aqui"></a>';
+                                echo '<a href="'.get_option('home').'"><h4 class="navbar-brand">'. get_bloginfo( 'name' ) .'</h4></a>';
                             }
-                        }
                         ?>
                     </div>
                     <div class="topList hidden-xs">

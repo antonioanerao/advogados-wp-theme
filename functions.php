@@ -5,6 +5,7 @@
 	require('functions/customizer/customizer-header-contact.php');
 	require('functions/customizer/customizer-banner-one.php');
 	require('functions/customizer/customizer-count.php');
+	require('functions/customizer/customizer-practice-area.php');
 
 	//Widgets
     require( 'functions/widgets/sidebar.php');
@@ -30,15 +31,14 @@
 
 	/* Custom Logo */
     add_theme_support( 'custom-logo' );
-    function themename_custom_logo_setup()
-    {
+    function themename_custom_logo_setup() {
         $defaults = array(
-            'height'      => '100',
-            'width'       => '100',
+
             'header-text' => array( 'site-title', 'site-description' ),
         );
-        add_theme_support( 'custom-logo', $defaults );
+        add_theme_support( 'navbar-brand', $defaults );
     }
+    add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
     /* Custom Menu */
     add_action( 'init', 'wpb_custom_new_menu' );
