@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/isotope/isotope.css">
     <link rel="stylesheet" type="text/css" href="plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="plugins/wave/waves.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css?v1.0.20">
+    <link rel="stylesheet" type="text/css" href="style.css?v1.1.1">
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -149,25 +149,13 @@ $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() )
                     wp_nav_menu( array(
                         'theme_location' => 'my-custom-menu',
                         'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
-                        'menu_class' => 'nav navbar-nav navbar-right'
+                        'menu_class' => 'nav navbar-nav navbar-right',
+                        'container_id' => 'cssmenu',
+                        'walker' => new CSS_Menu_Maker_Walker()
                     ) );
                     ?>
 
                     <!-- fim menu -->
-
-                    <div class="searchBox">
-                        <a href="#"><i class="fa fa-search"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li>
-                                <form class="navbar-form">
-                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                    <div class="form-group"> <input type="text" class="form-control" placeholder="Search">
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
             </nav>
         </div>

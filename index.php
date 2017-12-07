@@ -1,9 +1,7 @@
 <?php get_header() ?>
-    <!-- MAIN SLIDER -->
     <section class="main-slider" data-loop="true" data-autoplay="true" data-interval="7000">
         <?php echo do_shortcode('[soliloquy id="420"]'); ?>
     </section><!-- .hero-slider -->
-
 
     <?php
         //****** get index service  ********
@@ -22,8 +20,6 @@
         </div>
     </section>
 
-
-    <!-- CONSULTATION SECTION -->
     <section class="full-width-section clearfix">
         <div class="half-width half-width-left hidden-xs">
         </div>
@@ -46,7 +42,7 @@
     </section>
 
 <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if(is_plugin_active('our-team-enhanced/our-team-showcase.php')) { ?>
-<!-- Equipe -->
+
 <section class="commonSection clearfix whiteSection teamSection">
     <div class="container">
         <div class="sectionTitle text-center">
