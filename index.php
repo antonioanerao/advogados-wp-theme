@@ -26,17 +26,15 @@
         <div class="half-width half-width-right hidden-xs">
             <div class="free-request">
                 <i class="icon-lawyer-hammer"></i>
-                <h2>get a free consultation</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <a href="#" class="btn btn-secondary">submit your request</a>
+                <h2>Entre em contato conosco</h2>
+                <a href="<?php get_option('home'); ?>/contato" class="btn btn-secondary">Enviar Mensagem</a>
             </div>
         </div>
         <div class="container visible-xs">
             <div class="free-request">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <h2>get a free consultation</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <a href="#requestCosultation" data-toggle="modal" class="btn btn-secondary">submit your request</a>
+                <i class="icon-lawyer-hammer" aria-hidden="true"></i>
+                <h2>Entre em contato conosco</h2>
+                <a href="<?php get_option('home'); ?>/contato" class="btn btn-secondary">Enviar Mensagem</a>
             </div>
         </div>
     </section>
@@ -64,6 +62,7 @@
 ?>
 
 
+<?php if(have_posts()) : ?>
 <!-- Blog -->
 <section class="commonSection whiteSection clearfix newsSection">
     <div class="container">
@@ -80,6 +79,7 @@
             );
 
             query_posts($args_last_post);
+
             ?>
 
             <?php
@@ -140,5 +140,6 @@
 
     </div>
 </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

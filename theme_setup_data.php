@@ -80,6 +80,15 @@
             'practice_area_bloco06_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
             'practice_area_bloco06_image' => 'http://themes.iamabdus.com/trust/1.1/img/home/g-img6.jpg',
 
+            //Contact
+            'contact_section_enabled' => '',
+            'contact_title' => __('Página de contato','appointment'),
+            'contact_titulo_title'=>__('Fale Conosco','appointment'),
+            'contact_titulo_description' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'contact_endereco_title' => 'Rua Alexandre Farhat, 299, Bairro José Augusto, Sala da Cooprotec, Rio Branco - Acre',
+            'contact_telefone_title' => '(XX) XXXX-XXXX',
+            'contact_email_title' => 'contato@dominio.com.br',
+
         );
   	}
 ?>

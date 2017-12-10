@@ -1,3 +1,103 @@
+/* Código geral, que será herdado por qualquer dispositivos.
+   nesse caso, seria o código usado no desktop, na maioria das   vezes.
+   Se você já conhecer a ideia do Mobile First, esse primeiro código será destinado para mobiles.
+*/
+
+#cssmenu ul ul a {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #dca44d;
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 20px;
+  font-size: 12px;
+}
+
+#cssmenu > ul > li > a {
+  line-height: 65px;
+  font-size: 12px;
+}
+
+/*
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media screen and (min-width: 768px) {
+
+  #cssmenu ul ul a {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #dca44d;
+    border-top: 0 none;
+    line-height: 150%;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  #cssmenu > ul > li > a {
+    line-height: 65px;
+    font-size: 12px;
+  }
+
+  #cssmenu ul ul li {
+    float: none;
+  }
+  #cssmenu ul ul ul {
+    top: 0;
+    left: 190px;
+    width: 190px;
+  }
+}
+
+/*
+ Com uma largura mínima de 992 pixels. Monitores por exemplo.
+*/
+@media screen and (min-width: 992px) {
+
+  #cssmenu ul ul a {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #dca44d;
+    border-top: 0 none;
+    line-height: 150%;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  #cssmenu > ul > li > a {
+    line-height: 65px;
+    font-size: 12px;
+  }
+
+  #cssmenu ul ul li {
+    float: none;
+  }
+  #cssmenu ul ul ul {
+    top: 0;
+    left: 190px;
+    width: 190px;
+  }
+}
+
+/*
+ Dispositivos com largura mínima de 1200 pixels. Por exemplo TVs.
+*/
+@media screen and (min-width: 1200px)
+{
+  #cssmenu > ul > li > a {
+    line-height: 65px;
+    font-size: 14px;
+  }
+
+  #cssmenu ul ul li {
+    float: none;
+  }
+  #cssmenu ul ul ul {
+    top: 0;
+    left: 190px;
+    width: 190px;
+  }
+}
+
 @import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
 /* Starter CSS for Menu */
 #cssmenu {
@@ -18,7 +118,6 @@
   z-index: 597;
 }
 #cssmenu ul li {
-  float: left;
   min-height: 1px;
   vertical-align: middle;
 }
@@ -36,14 +135,7 @@
   z-index: 598;
   width: 100%;
 }
-#cssmenu ul ul li {
-  float: none;
-}
-#cssmenu ul ul ul {
-  top: 0;
-  left: 190px;
-  width: 190px;
-}
+
 #cssmenu ul li:hover > ul {
   visibility: visible;
 }
@@ -83,15 +175,6 @@
   border-top: 4px solid #dca44d;
   text-transform: none;
   min-width: 190px;
-}
-#cssmenu ul ul a {
-  background: #ffffff;
-  color: #000000;
-  border: 1px solid #dca44d;
-  border-top: 0 none;
-  line-height: 150%;
-  padding: 16px 20px;
-  font-size: 14px;
 }
 #cssmenu ul ul ul {
   border-top: 0 none;
@@ -151,9 +234,5 @@
 }
 #cssmenu a {
   color: #000000;
-  padding: 0 20px;
-}
-#cssmenu > ul > li > a {
-  line-height: 65px;
-  font-size: 15px;
+  padding: 0 15px;
 }

@@ -132,6 +132,15 @@
         $(".se-pre-con").fadeOut("slow");;
     });
 </script>
+
+<script>
+    $(document).ready(function () {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#msg').offset().top
+        }, 'slow');
+    });
+</script>
 <?php wp_footer(); ?>
 
 </body>

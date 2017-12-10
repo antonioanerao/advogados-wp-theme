@@ -71,7 +71,7 @@ $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() )
 <div class="se-pre-con"></div>
 <div class="main-wrapper">
     <!-- HEADER -->
-    <header id="pageTop" class="header">
+    <header id="pageTop" class="_header">
 
         <!-- TOP INFO BAR -->
         <div class="top-info-bar">
@@ -93,7 +93,7 @@ $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() )
                         </ul>
                     </div>
                     <div class="col-sm-6 col-xs-12 top-bar-right">
-                        <a href="#requestCosultation" data-toggle="modal">Request a free cosultation
+                        <a href="<?php get_option('home'); ?>/contato">Entre em contato conosco
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ $header_contact_setting = wp_parse_args(  get_option( 'theme_options', array() )
                         'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
                         'menu_class' => 'nav navbar-nav navbar-right',
                         'container_id' => 'cssmenu',
-                        'walker' => new CSS_Menu_Maker_Walker()
+                        'walker' => new CSS_COOP_Walker()
                     ) );
                     ?>
 
